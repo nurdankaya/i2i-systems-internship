@@ -6,6 +6,7 @@ public class Member {
     public static void main(String[] args) {
 
         HazelcastInstance instance = Hazelcast.newHazelcastInstance();
+
         IMap<Object,Object> map = instance.getMap("map");
 
         for (int i =0; i < 1000; i++){
