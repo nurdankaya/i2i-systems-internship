@@ -1,0 +1,12 @@
+io\wsdl2java\AddResponse.class
+io\wsdl2java\Calculator.class
+io\wsdl2java\Add.class
+io\wsdl2java\ObjectFactory.class
+io\wsdl2java\package-info.class
+io\wsdl2java\DivideResponse.class
+io\wsdl2java\MultiplyResponse.class
+io\wsdl2java\Subtract.class
+io\wsdl2java\SubtractResponse.class
+io\wsdl2java\CalculatorSoap.class
+io\wsdl2java\Multiply.class
+io\wsdl2java\Divide.class
