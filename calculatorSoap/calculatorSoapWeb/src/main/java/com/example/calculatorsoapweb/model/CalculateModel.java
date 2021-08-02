@@ -13,6 +13,13 @@ public class CalculateModel {
     public CalculateModel() {
     }
 
+    public CalculateModel(String operation, int firstNumber, int secondNumber, int result) {
+        this.operation = operation;
+        this.firstNumber = firstNumber;
+        this.secondNumber = secondNumber;
+        this.result = result;
+    }
+
     public String getOperation() {
         return operation;
     }

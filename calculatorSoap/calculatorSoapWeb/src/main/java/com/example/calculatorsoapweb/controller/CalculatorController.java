@@ -38,7 +38,7 @@ public class CalculatorController {
     }
     @RequestMapping(value="/", params="subtract", method = RequestMethod.POST)
     public ModelAndView subtract(@ModelAttribute("CalculateModel")  CalculateModel calculateModel){
-
+        logger.info("calculator subtracted");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("result",calculateService.subtract(calculateModel));
         modelAndView.setViewName("index");
@@ -46,6 +46,7 @@ public class CalculatorController {
     }
     @RequestMapping(value="/", params="multiply", method = RequestMethod.POST)
     public ModelAndView multiply(@ModelAttribute("CalculateModel")  CalculateModel calculateModel){
+        logger.info("calculator multiplied");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("result",calculateService.multiply(calculateModel));
         modelAndView.setViewName("index");
@@ -53,6 +54,7 @@ public class CalculatorController {
     }
     @RequestMapping(value="/", params="divide", method = RequestMethod.POST)
     public ModelAndView divide(@ModelAttribute("CalculateModel")  CalculateModel calculateModel){
+        logger.info("calculator divided");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("result",calculateService.divide(calculateModel));
         modelAndView.setViewName("index");
@@ -62,6 +64,7 @@ public class CalculatorController {
     @GetMapping("/result")
     @ResponseBody
     public ModelAndView resultCalculator() {
+        logger.info("calculator result calculated");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("CalculateModel",calculateModel);
         modelAndView.setViewName("result");
