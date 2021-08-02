@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/}" th:object="${CalculateModel}" method="POST">
+    <h1><p th:text="'result: ' + ${CalculateModel.result}"/></h1>
+
+</form>>
+</body>
+</html>
