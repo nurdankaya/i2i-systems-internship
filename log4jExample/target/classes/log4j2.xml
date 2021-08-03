@@ -19,6 +19,7 @@
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="5 KB"/>
             </Policies>
+            <DefaultRolloverStrategy max="5"></DefaultRolloverStrategy>
         </RollingFile>
 
 
