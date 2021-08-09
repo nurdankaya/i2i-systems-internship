@@ -13,7 +13,9 @@ public class KafkaController {
     Data data;
 
     @Autowired
-    PrimeAndFibonacci primeAndFibonacci;
+    KafkaProducer kafkaProducer;
+    @Autowired
+    KafkaConsumer kafkaConsumer;
 
     @Autowired
     private final KafkaProducer producer;
@@ -25,11 +27,11 @@ public class KafkaController {
 
 
     @PostMapping("/publish")
-    public void  writeMessageToTopic(@RequestBody Data data){
-        System.out.println(data.getNumberToCheck());
-        System.out.println(data.getOperationName());
+    public void  writeMessageToTopic(@RequestBody Data data) throws ClassNotFoundException {
+        Data takenData = null;
         this.data = data;
-        primeAndFibonacci.primeAndFibonacci(data);
+        kafkaProducer.createTopic();
+        kafkaProducer.writeMessage(data);
     }
 
 

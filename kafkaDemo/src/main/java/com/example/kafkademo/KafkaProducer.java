@@ -11,12 +11,12 @@ public class KafkaProducer {
     private static  final  String TOPIC="testTopic";
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, Data> kafkaTemplate;
 //private KafkaTemplate<String, String> kafkaTemplate;
 
 
-    public  void writeMessage(String msg){
-        this.kafkaTemplate.send(TOPIC,msg);
+    public  void writeMessage(Data msg){
+        this.kafkaTemplate.send(TOPIC, msg);
 
     }
     @Bean
